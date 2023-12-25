@@ -1,0 +1,278 @@
+@font-face {
+    font-family: 'Vazir';
+    src: url('../../fonts/vazir/Vazir-Light.eot');
+    src: url('../../fonts/vazir/Vazir-Light.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/vazir/Vazir-Light.woff2') format('woff2'),
+    url('../../fonts/vazir/Vazir-Light.woff') format('woff'),
+    url('../../fonts/vazir/Vazir-Light.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('../../fonts/vazir/Vazir-Bold.eot');
+    src: url('../../fonts/vazir/Vazir-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/vazir/Vazir-Bold.woff2') format('woff2'),
+    url('../../fonts/vazir/Vazir-Bold.woff') format('woff'),
+    url('../../fonts/vazir/Vazir-Bold.ttf') format('truetype');
+
+    font-weight: bold;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../../fonts/themes/admth-minimal-light/Avenir-Regular.eot');
+    src: url('../../fonts/themes/admth-minimal-light/Avenir-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/themes/admth-minimal-light/Avenir-Regular.woff2') format('woff2'),
+    url('../../fonts/themes/admth-minimal-light/Avenir-Regular.woff') format('woff'),
+    url('../../fonts/themes/admth-minimal-light/Avenir-Regular.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../../fonts/themes/admth-minimal-light/Avenir-Black.eot');
+    src: url('../../fonts/themes/admth-minimal-light/Avenir-Black.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/themes/admth-minimal-light/Avenir-Black.woff2') format('woff2'),
+    url('../../fonts/themes/admth-minimal-light/Avenir-Black.woff') format('woff'),
+    url('../../fonts/themes/admth-minimal-light/Avenir-Black.ttf') format('truetype');
+
+    font-weight: Bold;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../../fonts/themes/admth-minimal-light/Avenir-Light.eot');
+    src: url('../../fonts/themes/admth-minimal-light/Avenir-Light.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/themes/admth-minimal-light/Avenir-Light.woff2') format('woff2'),
+    url('../../fonts/themes/admth-minimal-light/Avenir-Light.woff') format('woff'),
+    url('../../fonts/themes/admth-minimal-light/Avenir-Light.ttf') format('truetype');
+
+    font-weight: 100;
+    font-style: normal;
+    font-display: auto;
+}
+
+
+#wpwrap{
+    background-color: #ffffff !important;
+}
+
+#adminmenu:lang(en), #adminmenuback:lang(en), #adminmenuwrap:lang(en){
+    font-family: Avenir, sans-serif !important;
+    background-color: #ffffff !important;
+}
+
+#adminmenu:lang(fa), #adminmenuback:lang(fa), #adminmenuwrap:lang(fa){
+    font-family: Vazir, sans-serif !important;
+    background-color: #ffffff !important;
+}
+
+#wpadminbar:lang(en) :not([class^="dashicons"]),
+#wpbody-content:lang(en) :not([class^="dashicons"]),
+#wpfooter:lang(en) :not([class^="dashicons"]),
+body, body .press-this a.wp-switch-editor:lang(en),
+.components-dropdown-menu__menu:lang(en){
+    font-family: Avenir, sans-serif;
+}
+
+#wpadminbar:lang(fa) :not([class^="dashicons"]),
+#wpbody-content:lang(fa) :not([class^="dashicons"]),
+#wpfooter:lang(fa) :not([class^="dashicons"]),
+body.rtl, body.rtl .press-this a.wp-switch-editor:lang(fa),
+.components-dropdown-menu__menu:lang(fa){
+    font-family: Vazir, sans-serif;
+}
+
+.postbox {
+    border: none;
+    background-color: #f5f5fc91;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    padding: 1%;
+}
+
+#wpwrap {
+    background-color: unset !important;
+}
+
+#wpbody {
+    background-color: white;
+    width: 98%;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 2%;
+}
+
+#footer-left {
+    padding: 0 2%;
+}
+
+#footer-right {
+    padding: 0 2%;
+}
+
+#footer-upgrade {
+    padding: 0 2%;
+}
+
+.wp-menu-name{
+    color: #181818 !important;
+}
+
+.php-error #adminmenuback, .php-error #adminmenuwrap{
+    margin-top: unset !important;
+}
+
+#adminmenuback {
+    height: fit-content !important;
+}
+
+#adminmenuwrap {
+    border-radius: 10px !important;
+}
+
+#adminmenu div.wp-menu-image:before{
+    color: #181818 !important;
+}
+#adminmenu li.menu-top:hover, #adminmenu li.opensub>a.menu-top, #adminmenu li>a.menu-top:focus {
+    background: #FEC785 !important;
+}
+#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu{
+    background: #FEC785 !important;
+}
+
+#adminmenu .wp-submenu{
+    background-color: #f0f6fe !important;
+    width: auto !important;
+}
+
+ul#adminmenu li {
+    padding: 5px !important;
+    border-radius: 5px !important;
+}
+
+#adminmenu .wp-submenu>li>a{
+    color: #181818 !important;
+}
+
+
+#adminmenu .wp-menu-name:hover{
+    background: #FEC785 !important;
+}
+
+#adminmenu .wp-menu-name:after{
+    background: #FEC785 !important;
+}
+
+
+#adminmenu .wp-menu-name:before{
+    background: #FEC785 !important;
+}
+
+#adminmenu .wp-submenu li:hover{
+    background: #FEC785 !important;
+}
+
+ul#adminmenu li::after {
+    display: none;
+}
+
+ul#adminmenu a.wp-has-current-submenu::after, ul#adminmenu > li.current > a.current::after{
+    display: none;
+}
+
+#adminmenu .wp-has-current-submenu .wp-submenu, #adminmenu .wp-has-current-submenu .wp-submenu.sub-open, #adminmenu .wp-has-current-submenu.opensub .wp-submenu, .no-js li.wp-has-current-submenu:hover .wp-submenu{
+    border-radius: 5px;
+}
+
+.wp-has-submenu.wp-has-current-submenu.wp-menu-open.menu-top.menu-icon-settings.menu-top-last {
+    border-radius: 5px;
+}
+/*Top Admin Bar*/
+
+#wpadminbar{
+    background: #ffffff !important;
+}
+
+#wpadminbar .ab-item{
+    color: #181818 !important;
+}
+
+#wpadminbar>#wp-toolbar span.ab-label{
+    color: #181818 !important;
+}
+
+
+
+#wpadminbar>#wp-toolbar span.ab-icon:before{
+    color: #181818 !important;
+}
+
+
+.wp-admin #wpadminbar #wp-admin-bar-site-name>.ab-item:before {
+    color: #181818 !important;
+}
+
+#wpadminbar #wp-admin-bar-wp-logo.hover > .ab-item .ab-icon {
+    background-position: 0 0;
+}
+
+
+#screen-meta-links{
+    margin: 14px 20px 0 0 !important;
+}
+
+#screen-meta-links .show-settings{
+    border-radius:4px !important;
+    border: 1px!important;
+}
+
+#screen-options-wrap{
+    border: 0 solid #c3c4c7;
+    padding: 0 !important;
+}
+
+#screen-meta{
+    border: 0 solid #c3c4c7;
+    padding: 0 !important;
+
+}
+
+#adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head, #adminmenu .wp-menu-arrow, #adminmenu .wp-menu-arrow div, #adminmenu li.current a.menu-top, #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu {
+    background: #FEC785 !important;
+}
+
+
+
+#wpadminbar .ab-top-menu>li.hover>.ab-item, #wpadminbar.nojq.quicklinks .ab-top-menu>.ab-item:focus, #wpadminbar:not(.nobile) .ab-top-menu>li:hover>.ab-item, #wpadminbar:not(.mobile) .ab-top-menu>li>.ab-item:focus {
+    background: #FEC785 !important;
+}
+
+#wpadminbar #wp-admin-bar-user-actions.ab-submenu {
+    background: #f0f6fe !important;
+}
+
+#wpadminbar .quicklinks ul{
+    background: #f0f6fe !important;
+}
+
+#wpadminbar #wp-admin-bar-my-account{
+    background: #ffffff !important;
+}
+
+
+#wpadminbar .avatar{
+    border-radius: 4px !important;
+    border: 0 !important;
+}

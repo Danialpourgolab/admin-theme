@@ -1,0 +1,215 @@
+@font-face {
+    font-family: 'Vazir';
+    src: url('../fonts/vazir/Vazir-Light.eot');
+    src: url('../fonts/vazir/Vazir-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/vazir/Vazir-Light.woff2') format('woff2'),
+    url('../fonts/vazir/Vazir-Light.woff') format('woff'),
+    url('../fonts/vazir/Vazir-Light.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+    font-display: auto;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('../fonts/vazir/Vazir-Bold.eot');
+    src: url('../fonts/vazir/Vazir-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/vazir/Vazir-Bold.woff2') format('woff2'),
+    url('../fonts/vazir/Vazir-Bold.woff') format('woff'),
+    url('../fonts/vazir/Vazir-Bold.ttf') format('truetype');
+
+    font-weight: bold;
+    font-style: normal;
+    font-display: auto;
+}
+
+img.admin-theme-menu-icon{
+    width: 30px;
+    vertical-align: middle;
+}
+.admth-expand-all{
+    display: none;
+}
+.admth-icon-themes{
+    background-image: url("../images/svg/themes.svg");
+    width: 15px !important;
+    height: 15px;
+    display: inline-block;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+.admth-icon-modules{
+    background-image: url("../images/svg/modules.svg");
+    width: 15px !important;
+    height: 15px;
+    display: inline-block;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+.admth-icon-edit{
+    background-image: url("../images/svg/edit.svg");
+    width: 15px !important;
+    height: 15px;
+    display: inline-block;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+.admth-icon-info{
+    background-image: url("../images/svg/information.svg");
+    width: 15px !important;
+    height: 15px;
+    display: inline-block;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+/*Settings Styles*/
+.admth-theme-light .admth-container{
+    border: none;
+}
+.admth-theme-light .admth-header-inner{
+    background: none;
+    background-color: unset;
+    border: none;
+}
+.admth-nav.admth-nav-normal.admth-nav-options{
+    width: 150px !important;
+}
+.admth-theme-light .admth-nav-background{
+    background-color: unset;
+    border: none;
+}
+
+.admth-theme-light .admth-nav-normal > ul li a{
+    border: none;
+}
+.admth-nav ul li {
+    margin-bottom: 5px;
+}
+.admth-theme-light .admth-nav ul li a {
+    background-color: unset;
+}
+.admth-theme-light .admth-nav-normal > ul li .admth-active {
+    border-radius: 6px;
+}
+.admth-theme-light .admth-nav ul li a:hover{
+    border-radius: 6px;
+}
+.admin-theme-menu-title-text{
+    margin: 0 10px;
+}
+.admth-top-save{
+    background-color: #0d6efd !important;
+    border: none !important;
+}
+.admth-buttons .admth-save {
+    padding: 0 30px;
+}
+.admth-content{
+    border-radius: 6px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.admth-container {
+    font-family: vazir, serif;
+}
+.admth-container input {
+    border: none !important;
+    background-color: #efefef;
+}
+.admth-container .button{
+    background-color: #0d6efd !important;
+    border: none !important;
+}
+.admth-field-image_select img{
+    width: 300px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.admth-field-image_select .admth--active figure {
+    box-shadow: unset;
+    border-radius: 6px;
+}
+.alert-simple {
+    /* border: 1px solid rgba(6, 44, 241, 0.46); */
+    font-family: vazir, serif;
+    background-color: rgba(7, 73, 149, 0.12156862745098039);
+    font-weight: bold;
+    transition: 0.5s;
+    cursor: pointer;
+    padding: 20px;
+}
+.alert-simple::before {
+    background-image: url("../images/svg/alert.svg");
+    width: 20px !important;
+    height: 20px;
+    display: inline-block;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    margin: 0 10px;
+}
+.admth-dl-btn{
+    background-color: #222;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: vazir, serif;
+    font-size: 12px;
+    line-height: 1.15;
+    overflow: visible;
+    padding: 10px 12px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: all 80ms ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    text-decoration: none;
+}
+.admth-dl-btn:hover{
+    background-color: #333;
+    color: #F0F8FB;
+}
+
+/*server info*/
+ .server-info-container {
+     font-family: vazir , serif , sans-serif;
+     margin: 20px;
+ }
+
+.server-info-table, .server-ram-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table-header {
+    background-color: #6c7ae0;
+    color: #F0F8FB;
+}
+
+.server-info-table td, .server-ram-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.server-info-table td:first-child, .server-ram-table td:first-child {
+    font-size: 13px;
+}
+
+.server-info-table td:nth-child(2), .server-ram-table td:nth-child(2) {
+    font-size: 13px;
+}
+.admth-wrap-table{
+    overflow: hidden;
+    border-radius: 6px;
+}
