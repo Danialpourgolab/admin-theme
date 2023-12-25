@@ -106,9 +106,7 @@ if ( ! class_exists( AdminTheme::class ) ) {
 						'title'   => esc_html__( 'Select Your Theme', 'admin-dashboard-theme' ),
 						'options' => array(
 							'minimal-light' => ADMTH_ASSETS_URL . '/images/dashboard-theme/minimal-light.png',
-							'minimal-dark' => ADMTH_ASSETS_URL . '/images/dashboard-theme/minimal-light.png',
-							'minimal-test1' => ADMTH_ASSETS_URL . '/images/dashboard-theme/minimal-light.png',
-							'minimal-test2' => ADMTH_ASSETS_URL . '/images/dashboard-theme/minimal-light.png',
+							'minimal-dark'  => ADMTH_ASSETS_URL . '/images/dashboard-theme/minimal-dark.png'
 						),
 					),
 				),
