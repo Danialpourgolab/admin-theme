@@ -114,7 +114,12 @@ img.admin-theme-menu-icon{
     border-radius: 6px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-.admth-container {
+.admth-container,
+.admin-theme-menu-title,
+.admth-header,
+.server-info-container h2,
+.admth-title h4,
+div#wpfooter{
     font-family: vazir, serif;
 }
 .admth-container input {

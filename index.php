@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Wordpress Admin Theme
+ * Plugin Name: Admin theme
  * Description: Lightweight Wordpress Dashboard Theme
  * Plugin URI:  https://pourgolab.ir/
  * Author:      Danial Pourgolab
@@ -10,6 +10,7 @@
  * Domain Path: /languages
  * Requires at least: 4.5
  * Requires PHP: 7.4
+ * license: GPL
  */
 
 

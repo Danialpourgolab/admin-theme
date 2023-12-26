@@ -1,0 +1,204 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Wordpress Admin Theme\n"
+"POT-Creation-Date: 2023-12-26 23:38+0330\n"
+"PO-Revision-Date: 2023-12-26 23:38+0330\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: index.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: sdk\n"
+
+#: includes/ServerInfo.php:109
+msgid "Unlimited"
+msgstr "نامحدود"
+
+#: includes/ServerInfo.php:113
+#, php-format
+msgid "The WP PHP Memory Limit is less than the %s Server PHP Memory Limit"
+msgstr "حداکثر حافظه PHP وردپرس کمتر از %s حداکثر حافظه PHP سرور است"
+
+#: includes/ServerInfo.php:134
+#, php-format
+msgid "%1$s - Recommend  PHP version of 7.3. See: %2$s"
+msgstr "%1$s - نسخه PHP 7.3 یا بالاتر توصیه می‌شود. مشاهده: %2$s"
+
+#: includes/ServerInfo.php:134
+msgid "WordPress Requirements"
+msgstr "نیازمندی‌های وردپرس"
+
+#: includes/ServerInfo.php:184 includes/ServerInfo.php:202
+msgid "N/A"
+msgstr "نامشخص"
+
+#: includes/ServerInfo.php:572 includes/ServerInfo.php:590
+msgid "PB"
+msgstr "پتابایت"
+
+#: includes/ServerInfo.php:574 includes/ServerInfo.php:592
+msgid "TB"
+msgstr "ترابایت"
+
+#: includes/ServerInfo.php:576 includes/ServerInfo.php:594
+msgid "GB"
+msgstr "گیگابایت"
+
+#: includes/ServerInfo.php:578 includes/ServerInfo.php:596
+msgid "MB"
+msgstr "مگابایت"
+
+#: includes/ServerInfo.php:580 includes/ServerInfo.php:598
+msgid "KB"
+msgstr "کیلوبایت"
+
+#: includes/ServerInfo.php:582
+msgid "bytes"
+msgstr "بایت"
+
+#: includes/ServerInfo.php:584 includes/ServerInfo.php:600
+msgid "Unknown"
+msgstr "ناشناخته"
+
+#: src/AdminTheme.php:63 src/AdminTheme.php:64
+msgid "Admin Theme"
+msgstr "قالب مدیریت"
+
+#: src/AdminTheme.php:75
+msgid "Designed with ❤️ by "
+msgstr "طراحی شده با ❤️ توسط "
+
+#. Author of the plugin/theme
+#: src/AdminTheme.php:75
+msgid "Danial Pourgolab"
+msgstr "دانیال پورگلاب"
+
+#: src/AdminTheme.php:110
+msgid "Themes"
+msgstr "قالب‌ها"
+
+#: src/AdminTheme.php:112
+msgid "Select your dashboard theme"
+msgstr "قالب داشبورد خود را انتخاب کنید"
+
+#: src/AdminTheme.php:117
+msgid "Select Your Theme"
+msgstr "انتخاب قالب شما"
+
+#: src/AdminTheme.php:129
+msgid "Modules"
+msgstr "ماژول‌ها"
+
+#: src/AdminTheme.php:131
+msgid "You can select some extra modules here"
+msgstr "شما می‌توانید ماژول‌های اضافی را در اینجا انتخاب کنید"
+
+#: src/AdminTheme.php:136
+msgid ""
+"Important Note: As long as the plugin is active, enabling or disabling "
+"debugging is done from this section."
+msgstr ""
+"توجه مهم: تا زمانی که افزونه فعال است، فعال یا غیرفعال کردن اشکال‌زدایی از این "
+"بخش انجام می‌شود."
+
+#: src/AdminTheme.php:141
+msgid "Active wordpress debug and download debug log file"
+msgstr "فعال کردن اشکال‌زدایی وردپرس و دانلود فایل گزارش اشکال‌زدایی"
+
+#: src/AdminTheme.php:142
+msgid "Wordpress Debug"
+msgstr "اشکال‌زدایی وردپرس"
+
+#: src/AdminTheme.php:143 src/AdminTheme.php:150
+msgid "You can active wordpress debugging."
+msgstr "شما می‌توانید اشکال‌زدایی وردپرس را فعال کنید."
+
+#: src/AdminTheme.php:149
+msgid "Download Wordpress Debug Log"
+msgstr "دانلود گزارش اشکال‌زدایی وردپرس"
+
+#: src/AdminTheme.php:156
+msgid "Active system info monitoring"
+msgstr "فعال کردن نظارت بر اطلاعات سیستم"
+
+#: src/AdminTheme.php:157
+msgid "Host Resource"
+msgstr "منابع هاست"
+
+#: src/AdminTheme.php:158
+msgid "Do you want to show your host resource in admin dashboard?"
+msgstr "آیا می‌خواهید منابع هاست خود را در داشبورد مدیریت نمایش دهید؟"
+
+#: src/AdminTheme.php:163
+msgid "Enter just 64 or 128 or 256 or 512 or 1024 and enter 0 for default."
+msgstr ""
+"فقط عدد 64 یا 128 یا 256 یا 512 یا 1024 را وارد کنید و برای پیش‌فرض 0 را وارد "
+"کنید."
+
+#: src/AdminTheme.php:168
+msgid "Wp Memory Limit"
+msgstr "حداکثر حافظه وردپرس"
+
+#: src/AdminTheme.php:174
+msgid "The dashboard and login|register logo"
+msgstr "لوگوی داشبورد و ورود/ثبت‌نام"
+
+#: src/AdminTheme.php:175
+msgid "Wordpress Logo Replace"
+msgstr "جایگزینی لوگوی وردپرس"
+
+#: src/AdminTheme.php:184
+msgid "System Info"
+msgstr "اطلاعات سیستم"
+
+#: src/AdminTheme.php:186
+msgid "System information"
+msgstr "اطلاعات سیستم"
+
+#: src/AdminTheme.php:225
+msgid "Server Information"
+msgstr "اطلاعات سرور"
+
+#: src/AdminTheme.php:271
+msgid "Server RAM Details"
+msgstr "جزئیات حافظه RAM سرور"
+
+#: src/AdminTheme.php:291
+msgid "No RAM details available."
+msgstr "جزئیات حافظه RAM در دسترس نیست."
+
+#: src/AdminTheme.php:296
+msgid "You must active system info in module section first"
+msgstr "شما باید ابتدا اطلاعات سیستم را در بخش ماژول فعال کنید"
+
+#: src/AdminTheme.php:355
+msgid "Download Debug Log"
+msgstr "دانلود گزارش اشکال‌زدایی"
+
+#. Plugin Name of the plugin/theme
+msgid "Admin theme"
+msgstr "قالب مدیریت"
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://pourgolab.ir/"
+msgstr "https://pourgolab.ir/"
+
+#. Description of the plugin/theme
+msgid "Lightweight Wordpress Dashboard Theme"
+msgstr "قالب سبک برای داشبورد وردپرس"
+
+#~ msgid "Wordpress Admin Theme"
+#~ msgstr "قالب مدیریت وردپرس"

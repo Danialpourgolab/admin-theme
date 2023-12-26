@@ -19,9 +19,11 @@ if ( ! class_exists( AdminTheme::class ) ) {
 		 */
 		public function init(): void {
 
-//			load_textdomain( 'admin-dashboard-theme', ADMTH_DIR . '/languages' );
+            self::load_text_domain('admin-dashboard-theme', plugin_dir_path( __DIR__ ) . 'languages' );
+
 			register_activation_hook( __FILE__, [ __CLASS__, 'activation' ] );
 			add_action( 'after_setup_theme', [ __CLASS__, 'load_codestar' ], - 20 );
+
 			add_action( "init", [ __CLASS__, 'admin_init' ] );
 			add_action( 'admin_dashboard_theme_create_section', [ __CLASS__, 'create_menu_theme_select' ] );
 			add_action( 'admin_dashboard_theme_create_section', [ __CLASS__, 'create_menu_module_select' ] );
@@ -31,9 +33,18 @@ if ( ! class_exists( AdminTheme::class ) ) {
 			add_action( 'login_head', [ __CLASS__, 'admth_login_logo' ] );
 			add_action( 'admin_enqueue_scripts', [ __CLASS__, 'register_assets' ], 999 );
 			add_action( 'admin_enqueue_scripts', [ __CLASS__, 'admth_theme_styles' ], 999 );
-
+			self::load_text_domain('admth', plugin_dir_path( __DIR__ ) . 'languages' );
 			self::admth_wordpress_debug();
 			self::admth_wp_memory_limit();
+		}
+
+		public static function load_text_domain( $domain, $folder_path )
+		{
+
+			$locale  = determine_locale();
+			$mo_file = "$domain-$locale.mo";
+			$sss = rtrim( $folder_path, '/\\' ) . '/' . ltrim( $mo_file, '/\\' );
+			load_textdomain( $domain, $sss );
 		}
 
 

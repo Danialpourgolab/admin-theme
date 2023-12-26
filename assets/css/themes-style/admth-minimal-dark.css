@@ -79,6 +79,10 @@ body label {
     color: #f0f0f0;
 }
 
+.edit-post-layout span {
+    color: unset;
+}
+
 body a,
 .wp-core-ui .button-link {
     color: #42b4a6;
@@ -585,4 +589,9 @@ form[action="options.php"] select:focus,
 .postbox input::placeholder,
 .postbox textarea::placeholder {
     color: #f0f0f0;
+}
+
+.notice {
+    background-color: #5c5c5c !important;
+    border-radius: 5px;
 }
