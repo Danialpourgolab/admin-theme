@@ -1,10 +1,9 @@
 <?php
 /**
- * Plugin Name: Admin theme
+ * Plugin Name: Dashboard Admin Theme
  * Description: Lightweight Wordpress Dashboard Theme
- * Plugin URI:  https://pourgolab.ir/
+ * Plugin URI:  https://abiwp.ir/
  * Author:      Danial Pourgolab
- * Author URI:  https://pourgolab.ir/
  * Version:     1.0.0
  * Text Domain: admin-dashboard-theme
  * Domain Path: /languages

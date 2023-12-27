@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Wordpress Admin Theme\n"
-"POT-Creation-Date: 2023-12-26 23:38+0330\n"
-"PO-Revision-Date: 2023-12-26 23:38+0330\n"
+"POT-Creation-Date: 2023-12-27 22:26+0330\n"
+"PO-Revision-Date: 2023-12-27 22:27+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -188,17 +188,16 @@ msgid "Download Debug Log"
 msgstr "دانلود گزارش اشکال‌زدایی"
 
 #. Plugin Name of the plugin/theme
-msgid "Admin theme"
-msgstr "قالب مدیریت"
+msgid "Dashboard Admin Theme"
+msgstr "قالب مدیریت وردپرس"
 
 #. Plugin URI of the plugin/theme
-#. Author URI of the plugin/theme
-msgid "https://pourgolab.ir/"
-msgstr "https://pourgolab.ir/"
+msgid "https://abiwp.ir/"
+msgstr "https://abiwp.ir/"
 
 #. Description of the plugin/theme
 msgid "Lightweight Wordpress Dashboard Theme"
 msgstr "قالب سبک برای داشبورد وردپرس"
 
-#~ msgid "Wordpress Admin Theme"
-#~ msgstr "قالب مدیریت وردپرس"
+#~ msgid "Admin theme"
+#~ msgstr "قالب مدیریت"

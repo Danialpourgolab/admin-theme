@@ -2,7 +2,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /** Path and URL constants **/
-const ADMTH = 'Wordpress Admin Theme'; // WRCS: DEFINED_VERSION.
+const ADMTH = 'Dashboard Admin Theme'; // WRCS: DEFINED_VERSION.
 const ADMTH_VERSION   = '1.0.0'; // WRCS: DEFINED_VERSION.
 
 define( 'ADMTH_URL', plugins_url( '', __FILE__ ) );
