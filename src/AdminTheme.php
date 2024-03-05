@@ -61,7 +61,7 @@ if ( ! class_exists( AdminTheme::class ) ) {
 			$arg    = [
 				'menu_icon'          => 'dashicons-art',
 				'menu_title'         => esc_html__( 'Admin Theme', 'admin-dashboard-theme' ),
-				'framework_title'    => '<div class="admin-theme-menu-title"><img src="' . ADMTH_ASSETS_URL . '/images/admin-setting-icon.png" alt="Icon" class="admin-theme-menu-icon" /><span class="admin-theme-menu-title-text">' . esc_html__( 'Admin Theme', 'admin-dashboard-theme' ) . '</span></div>',
+				'framework_title' => '<div class="admin-theme-menu-title"><img src="' . esc_url(ADMTH_ASSETS_URL . '/images/admin-setting-icon.png') . '" alt="Icon" class="admin-theme-menu-icon" /><span class="admin-theme-menu-title-text">' . esc_html__( 'Admin Theme', 'admin-dashboard-theme' ) . '</span></div>',
 				'menu_slug'          => $prefix,
 				'show_reset_all'     => false,
 				'show_bar_menu'      => false,
@@ -362,7 +362,7 @@ if ( ! class_exists( AdminTheme::class ) ) {
 		public static function admth_theme_styles() {
 			$admth_theme_select = self::get_options( 'admth-theme-select' );
 			if ( in_array( $admth_theme_select, [ 'minimal-light', 'minimal-dark' ] ) ) {
-				wp_enqueue_style( 'admin-theme-setting', ADMTH_ASSETS_URL . '/css/themes-style/admth-' . $admth_theme_select . '.css' );
+				wp_enqueue_style( 'admin-theme-styles', ADMTH_ASSETS_URL . '/css/themes-style/admth-' . $admth_theme_select . '.css' );
 			}
 		}
 	}

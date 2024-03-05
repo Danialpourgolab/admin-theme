@@ -7,6 +7,7 @@ Tested up to: 6.4.2
 Requires PHP: 7.4
 License: GPL
 License URI: https://abiwp.ir/
+Stable Tag: 1.0.0
 
 Enhance WordPress admin: Themes, modules, customization. Download for streamlined interface!
 

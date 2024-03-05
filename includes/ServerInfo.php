@@ -20,59 +20,24 @@ class ServerInfo {
 	 * Get the server CPU load in percentage.
 	 */
 
-	public function get_server_cpu_load_percentage() {
+	public function get_server_cpu_load_percentage()
+	{
 		$result = -1;
-		$lines  = null;
-
 		$os = '';
-		if ( defined( 'PHP_OS' ) ) {
+		if (defined('PHP_OS')) {
 			$os = PHP_OS;
 		}
 
 		// Linux server
-		if ( $os == 'Linux' ) {
-			$checks = [];
-			foreach ( [ 0, 1 ] as $i ) {
-				$cmd   = '/proc/stat';
-				$lines = [];
-				$fh    = fopen( $cmd, 'r' );
-				if ($fh) {
-					while ( $line = fgets( $fh ) ) {
-						$lines[] = $line;
-					}
-					fclose( $fh );
-				}
-				foreach ( $lines as $line ) {
-					$ma = [];
-					if ( ! preg_match( '/^cpu (\d+) (\d+) (\d+) (\d+) (\d+) (\d+) (\d+) (\d+) (\d+) (\d+)$/', $line, $ma ) ) {
-						continue;
-					}
-					$total = $ma[1] + $ma[2] + $ma[3] + $ma[4] + $ma[5] + $ma[6] + $ma[7] + $ma[8] + $ma[9];
-					// $totalCpu = $ma[1] + $ma[2] + $ma[3];
-					// $result = (100 / $total) * $totalCpu;
-					$ma['total'] = $total;
-					$checks[]    = $ma;
-					break;
-				}
-				if ( $i == 0 ) {
-					// Wait before checking again.
-					sleep( 1 );
-				}
-			}
-			// Idle - prev idle
-			$diffIdle = $checks[1][4] - $checks[0][4];
-			// Total - prev total
-			$diffTotal = $checks[1]['total'] - $checks[0]['total'];
-			// Usage in %
-			$diffUsage = round( ( 1000 * ( $diffTotal - $diffIdle ) / $diffTotal + 5 ) / 10, 2 );
-			$result    = $diffUsage;
-
+		if ($os == 'Linux') {
+			// Get CPU load using sys_getloadavg()
+			$load_avg = sys_getloadavg();
+			$result = round($load_avg[0] * 100, 2);
 			return $result;
 		}
 
 		return 'N/A';
 	}
-
 	/**
 	 * Convert Memory Size
 	 *
@@ -103,14 +68,15 @@ class ServerInfo {
 	 * Get Server/WP Memory Limit
 	 */
 
-	public function get_wp_memory_limit() {
-		$memory_limit = (int) @ini_get( 'memory_limit' ) . ' MB' . ' (' . (int) WP_MEMORY_LIMIT . ' MB)';
-		if ( @ini_get( 'memory_limit' ) == '-1' ) {
-			$memory_limit = '-1 / ' . esc_html__( 'Unlimited', 'adminify' ) . ' (' . (int) WP_MEMORY_LIMIT . ' MB)';
+	public function get_wp_memory_limit()
+	{
+		$memory_limit = (int)ini_get('memory_limit') . ' MB' . ' (' . (int)WP_MEMORY_LIMIT . ' MB)';
+		if (ini_get('memory_limit') == '-1') {
+			$memory_limit = '-1 / ' . esc_html__('Unlimited', 'adminify') . ' (' . (int)WP_MEMORY_LIMIT . ' MB)';
 		}
 
-		if ( (int) WP_MEMORY_LIMIT < (int) @ini_get( 'memory_limit' ) && WP_MEMORY_LIMIT != '-1' || (int) WP_MEMORY_LIMIT < (int) @ini_get( 'memory_limit' ) && @ini_get( 'memory_limit' ) != '-1' ) {
-			$memory_limit .= ' <span class="warning"><span class="dashicons dashicons-warning"></span> ' . sprintf( __( 'The WP PHP Memory Limit is less than the %s Server PHP Memory Limit', 'adminify' ), (int) @ini_get( 'memory_limit' ) . ' MB' ) . '!</span>';
+		if ((int)WP_MEMORY_LIMIT < (int)ini_get('memory_limit') && WP_MEMORY_LIMIT != '-1' || (int)WP_MEMORY_LIMIT < (int)ini_get('memory_limit') && ini_get('memory_limit') != '-1') {
+			$memory_limit .= ' <span class="warning"><span class="dashicons dashicons-warning"></span> ' . sprintf(__('The WP PHP Memory Limit is less than the %s Server PHP Memory Limit', 'adminify'), (int)ini_get('memory_limit') . ' MB') . '!</span>';
 		}
 
 		return $memory_limit;
@@ -119,19 +85,20 @@ class ServerInfo {
 	/**
 	 * Get PHP Version
 	 */
-	public function get_php_version() {
+	public function get_php_version()
+	{
 		$php_version = 'N/A';
 
-		if ( function_exists( 'phpversion' ) ) {
+		if (function_exists('phpversion')) {
 			$php_version = phpversion();
 		}
 
-		if ( defined( 'PHP_VERSION' ) ) {
+		if (defined('PHP_VERSION')) {
 			$php_version = PHP_VERSION;
 		}
 
-		if ( $php_version != 'N/A' && version_compare( $php_version, '7.3', '<' ) ) {
-			$php_version = '<span class="warning"><span class="dashicons dashicons-warning"></span> ' . sprintf( __( '%1$s - Recommend  PHP version of 7.3. See: %2$s', 'adminify' ), esc_html( $php_version ), '<a href="https://wordpress.org/about/requirements/" target="_blank" rel="noopener">' . __( 'WordPress Requirements', 'adminify' ) . '</a>' ) . '</span>';
+		if ($php_version != 'N/A' && version_compare($php_version, '7.3', '<')) {
+			$php_version = '<span class="warning"><span class="dashicons dashicons-warning"></span> ' . sprintf(__('%1$s - Recommend  PHP version of 7.3. See: %2$s', 'adminify'), esc_html($php_version), '<a href="https://wordpress.org/about/requirements/" target="_blank" rel="noopener">' . __('WordPress Requirements', 'adminify') . '</a>') . '</span>';
 		}
 
 		return $php_version;
@@ -157,10 +124,11 @@ class ServerInfo {
 	/**
 	 * Get Curl Version
 	 */
-	public function get_cURL_version() {
+	public function get_cURL_version()
+	{
 		$curl_version = 'N/A';
 
-		if ( function_exists( 'curl_version' ) ) {
+		if (function_exists('curl_version')) {
 			$curl_version = curl_version();
 			$curl_version = $curl_version['version'] . ', ' . $curl_version['ssl_version'];
 		}
