@@ -19,7 +19,7 @@ if ( ! class_exists( AdminTheme::class ) ) {
 		 */
 		public function init(): void {
 
-            self::load_text_domain('admin-dashboard-theme', plugin_dir_path( __DIR__ ) . 'languages' );
+			self::load_text_domain( 'admin-dashboard-theme', plugin_dir_path( __DIR__ ) . 'languages' );
 
 			register_activation_hook( __FILE__, [ __CLASS__, 'activation' ] );
 			add_action( 'after_setup_theme', [ __CLASS__, 'load_codestar' ], - 20 );
@@ -33,17 +33,16 @@ if ( ! class_exists( AdminTheme::class ) ) {
 			add_action( 'login_head', [ __CLASS__, 'admth_login_logo' ] );
 			add_action( 'admin_enqueue_scripts', [ __CLASS__, 'register_assets' ], 999 );
 			add_action( 'admin_enqueue_scripts', [ __CLASS__, 'admth_theme_styles' ], 999 );
-			self::load_text_domain('admth', plugin_dir_path( __DIR__ ) . 'languages' );
+			self::load_text_domain( 'admth', plugin_dir_path( __DIR__ ) . 'languages' );
 			self::admth_wordpress_debug();
 			self::admth_wp_memory_limit();
 		}
 
-		public static function load_text_domain( $domain, $folder_path )
-		{
+		public static function load_text_domain( $domain, $folder_path ) {
 
 			$locale  = determine_locale();
 			$mo_file = "$domain-$locale.mo";
-			$sss = rtrim( $folder_path, '/\\' ) . '/' . ltrim( $mo_file, '/\\' );
+			$sss     = rtrim( $folder_path, '/\\' ) . '/' . ltrim( $mo_file, '/\\' );
 			load_textdomain( $domain, $sss );
 		}
 
@@ -61,7 +60,7 @@ if ( ! class_exists( AdminTheme::class ) ) {
 			$arg    = [
 				'menu_icon'          => 'dashicons-art',
 				'menu_title'         => esc_html__( 'Admin Theme', 'admin-dashboard-theme' ),
-				'framework_title' => '<div class="admin-theme-menu-title"><img src="' . esc_url(ADMTH_ASSETS_URL . '/images/admin-setting-icon.png') . '" alt="Icon" class="admin-theme-menu-icon" /><span class="admin-theme-menu-title-text">' . esc_html__( 'Admin Theme', 'admin-dashboard-theme' ) . '</span></div>',
+				'framework_title'    => '<div class="admin-theme-menu-title"><img src="' . esc_url( ADMTH_ASSETS_URL . '/images/admin-setting-icon.png' ) . '" alt="Icon" class="admin-theme-menu-icon" /><span class="admin-theme-menu-title-text">' . esc_html__( 'Admin Theme', 'admin-dashboard-theme' ) . '</span></div>',
 				'menu_slug'          => $prefix,
 				'show_reset_all'     => false,
 				'show_bar_menu'      => false,
@@ -96,13 +95,8 @@ if ( ! class_exists( AdminTheme::class ) ) {
 			}
 		}
 
-		public static function get_page() {
-			$page = '';
-			if ( isset( $_GET['page'] ) ) {
-				$page = $_GET['page'];
-			}
-
-			return $page;
+		public static function get_page(): string {
+			return isset( $_GET['page'] ) ? sanitize_text_field( $_GET['page'] ) : '';
 		}
 
 		public static function create_menu_theme_select() {
@@ -361,8 +355,10 @@ if ( ! class_exists( AdminTheme::class ) ) {
 
 		public static function admth_theme_styles() {
 			$admth_theme_select = self::get_options( 'admth-theme-select' );
-			if ( in_array( $admth_theme_select, [ 'minimal-light', 'minimal-dark' ] ) ) {
-				wp_enqueue_style( 'admin-theme-styles', ADMTH_ASSETS_URL . '/css/themes-style/admth-' . $admth_theme_select . '.css' );
+			if ( self::get_page() !== 'admin-theme' ) {
+				if ( in_array( $admth_theme_select, [ 'minimal-light', 'minimal-dark' ] ) ) {
+					wp_enqueue_style( 'admin-theme-styles', ADMTH_ASSETS_URL . '/css/themes-style/admth-' . $admth_theme_select . '.css' );
+				}
 			}
 		}
 	}

@@ -414,7 +414,6 @@ if ( ! class_exists( 'ADMTH_Setup' ) ) {
         'checkbox',
         'code_editor',
         'color',
-        'color_group',
         'content',
         'date',
         'datetime',
@@ -427,7 +426,6 @@ if ( ! class_exists( 'ADMTH_Setup' ) ) {
         'image_select',
         'link',
         'link_color',
-        'map',
         'media',
         'notice',
         'number',
@@ -435,7 +433,6 @@ if ( ! class_exists( 'ADMTH_Setup' ) ) {
         'radio',
         'repeater',
         'select',
-        'slider',
         'sortable',
         'sorter',
         'spacing',
@@ -446,7 +443,6 @@ if ( ! class_exists( 'ADMTH_Setup' ) ) {
         'tabbed',
         'text',
         'textarea',
-        'typography',
         'upload',
         'wp_editor',
       ) );
@@ -578,10 +574,10 @@ if ( ! class_exists( 'ADMTH_Setup' ) ) {
 
       // Font awesome 4 and 5 loader
       if ( apply_filters( 'admth_fa4', false ) ) {
-        wp_enqueue_style( 'admth-fa', 'https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css', array(), '4.7.0', 'all' );
+        wp_enqueue_style( 'admth-fa', self::include_plugin_url( 'assets/css/font-awesome.min.css' ), array(), '4.7.0', 'all' );
       } else {
-        wp_enqueue_style( 'admth-fa5', 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css', array(), '5.15.5', 'all' );
-        wp_enqueue_style( 'admth-fa5-v4-shims', 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/v4-shims.min.css', array(), '5.15.5', 'all' );
+        wp_enqueue_style( 'admth-fa5', self::include_plugin_url( 'assets/css/all.min.css' ), array(), '5.15.5', 'all' );
+        wp_enqueue_style( 'admth-fa5-v4-shims', self::include_plugin_url( 'assets/css/v4-shims.min.css' ), array(), '5.15.5', 'all' );
       }
 
       // Check for developer mode
@@ -656,7 +652,7 @@ if ( ! class_exists( 'ADMTH_Setup' ) ) {
 
           $query['display'] = 'swap';
 
-          wp_enqueue_style( 'admth-google-web-fonts', esc_url( add_query_arg( $query, '//fonts.googleapis.com/css' ) ), array(), null );
+          wp_enqueue_style( 'admth-google-web-fonts', self::include_plugin_url( 'assets/js/webfont.js' ), array(), null );
 
         }
 
