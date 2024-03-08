@@ -50,7 +50,7 @@ if ( ! class_exists( 'ADMTH_Field_spacing' ) ) {
       $unit    = ( count( $args['units'] ) === 1 && ! empty( $args['unit'] ) ) ? $args['units'][0] : '';
       $is_unit = ( ! empty( $unit ) ) ? ' admth--is-unit' : '';
 
-      echo $this->field_before();
+      
 
       echo '<div class="admth--inputs" data-depend-id="'. esc_attr( $this->field['id'] ) .'">';
 
@@ -103,7 +103,7 @@ if ( ! class_exists( 'ADMTH_Field_spacing' ) ) {
 
       echo '</div>';
 
-      echo $this->field_after();
+      
 
     }
 

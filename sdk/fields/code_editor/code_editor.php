@@ -30,9 +30,9 @@ if ( ! class_exists( 'ADMTH_Field_code_editor' ) ) {
       $settings = ( ! empty( $this->field['settings'] ) ) ? $this->field['settings'] : array();
       $settings = wp_parse_args( $settings, $default_settings );
 
-      echo $this->field_before();
-      echo '<textarea name="'. esc_attr( $this->field_name() ) .'"'. $this->field_attributes() .' data-editor="'. esc_attr( json_encode( $settings ) ) .'">'. $this->value .'</textarea>';
-      echo $this->field_after();
+      
+      echo '<textarea name="'. esc_attr( $this->field_name() ) .'"'. $this->field_attributes() .' data-editor="'. esc_attr( wp_json_encode( $settings ) ) .'">'. $this->value .'</textarea>';
+      
 
     }
 

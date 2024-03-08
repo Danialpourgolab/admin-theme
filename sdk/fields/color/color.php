@@ -18,9 +18,9 @@ if ( ! class_exists( 'ADMTH_Field_color' ) ) {
 
       $default_attr = ( ! empty( $this->field['default'] ) ) ? ' data-default-color="'. esc_attr( $this->field['default'] ) .'"' : '';
 
-      echo $this->field_before();
+      
       echo '<input type="text" name="'. esc_attr( $this->field_name() ) .'" value="'. esc_attr( $this->value ) .'" class="admth-color"'. $default_attr . $this->field_attributes() .'/>';
-      echo $this->field_after();
+      
 
     }
 

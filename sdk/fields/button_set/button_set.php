@@ -24,7 +24,7 @@ if ( ! class_exists( 'ADMTH_Field_button_set' ) ) {
 
       $value = ( is_array( $this->value ) ) ? $this->value : array_filter( (array) $this->value );
 
-      echo $this->field_before();
+      
 
       if ( isset( $this->field['options'] ) ) {
 
@@ -59,7 +59,7 @@ if ( ! class_exists( 'ADMTH_Field_button_set' ) ) {
 
       }
 
-      echo $this->field_after();
+      
 
     }
 

@@ -132,7 +132,6 @@ if ( ! class_exists( AdminTheme::class ) ) {
 					array(
 						'id'    => 'wordpress-debug',
 						'type'  => 'switcher',
-						'help'  => esc_html__( 'Active wordpress debug and download debug log file', 'admin-dashboard-theme' ),
 						'title' => esc_html__( 'Wordpress Debug', 'admin-dashboard-theme' ),
 						'label' => esc_html__( 'You can active wordpress debugging.', 'admin-dashboard-theme' )
 					),
@@ -147,7 +146,6 @@ if ( ! class_exists( AdminTheme::class ) ) {
 					array(
 						'id'    => 'host-resource',
 						'type'  => 'switcher',
-						'help'  => esc_html__( 'Active system info monitoring', 'admin-dashboard-theme' ),
 						'title' => esc_html__( 'Host Resource', 'admin-dashboard-theme' ),
 						'label' => esc_html__( 'Do you want to show your host resource in admin dashboard?', 'admin-dashboard-theme' )
 					),
@@ -165,7 +163,6 @@ if ( ! class_exists( AdminTheme::class ) ) {
 					array(
 						'id'      => 'wordpress-logo-replace',
 						'type'    => 'media',
-						'help'    => esc_html__( 'The dashboard and login|register logo', 'admin-dashboard-theme' ),
 						'title'   => esc_html__( 'Wordpress Logo Replace', 'admin-dashboard-theme' ),
 						'library' => 'image',
 					),
@@ -287,7 +284,7 @@ if ( ! class_exists( AdminTheme::class ) ) {
 
 				echo '</div>';
 			} else {
-				_e( 'You must active system info in module section first', 'admin-dashboard-theme' );
+				esc_html_e( 'You must activate system info in the module section first', 'admin-dashboard-theme' );
 			}
 		}
 

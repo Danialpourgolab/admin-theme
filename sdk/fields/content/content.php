@@ -18,7 +18,7 @@ if ( ! class_exists( 'ADMTH_Field_content' ) ) {
 
       if ( ! empty( $this->field['content'] ) ) {
 
-        echo $this->field['content'];
+        echo esc_html($this->field['content']);
 
       }
 

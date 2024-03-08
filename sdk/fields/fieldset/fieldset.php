@@ -16,7 +16,7 @@ if ( ! class_exists( 'ADMTH_Field_fieldset' ) ) {
 
     public function render() {
 
-      echo $this->field_before();
+      
 
       echo '<div class="admth-fieldset-content" data-depend-id="'. esc_attr( $this->field['id'] ) .'">';
 
@@ -33,7 +33,7 @@ if ( ! class_exists( 'ADMTH_Field_fieldset' ) ) {
 
       echo '</div>';
 
-      echo $this->field_after();
+      
 
     }
 

@@ -205,7 +205,7 @@ if ( ! class_exists( 'ADMTH_Options' ) ) {
 
       // XSS ok.
       // No worries, This "POST" requests is sanitizing in the below foreach. see #L337 - #L341
-      $response = ( $ajax && isset( $_POST['data'] ) ) ? json_decode( wp_unslash( trim( $_POST['data'] ) ), true ) : $_POST;
+      $response = ( $ajax && isset( $_POST['data'] ) ) ? wp_json_decode( wp_unslash( trim( $_POST['data'] ) ), true ) : $_POST;
 
       // Set variables.
       $data      = array();
@@ -223,7 +223,7 @@ if ( ! class_exists( 'ADMTH_Options' ) ) {
 
           // XSS ok.
           // No worries, This "POST" requests is sanitizing in the below foreach. see #L337 - #L341
-          $import_data  = json_decode( wp_unslash( trim( $response[ 'admth_import_data' ] ) ), true );
+          $import_data  = wp_json_decode( wp_unslash( trim( $response[ 'admth_import_data' ] ) ), true );
           $options      = ( is_array( $import_data ) && ! empty( $import_data ) ) ? $import_data : array();
           $importing    = true;
           $this->notice = esc_html__( 'Settings successfully imported.', 'admth' );

@@ -58,7 +58,7 @@ if ( ! class_exists( 'ADMTH_Field_media' ) ) {
       $hidden_auto = ( empty( $this->value['url'] ) ) ? ' hidden' : '';
       $placeholder = ( empty( $this->field['placeholder'] ) ) ? ' placeholder="'.  esc_html__( 'Not selected', 'admth' ) .'"' : '';
 
-      echo $this->field_before();
+      
 
       if ( ! empty( $args['preview'] ) ) {
 
@@ -88,7 +88,7 @@ if ( ! class_exists( 'ADMTH_Field_media' ) ) {
       echo '<input type="hidden" name="'. esc_attr( $this->field_name( '[title]' ) ) .'" value="'. esc_attr( $this->value['title'] ) .'" class="admth--title"/>';
       echo '<input type="hidden" name="'. esc_attr( $this->field_name( '[description]' ) ) .'" value="'. esc_attr( $this->value['description'] ) .'" class="admth--description"/>';
 
-      echo $this->field_after();
+      
 
     }
 

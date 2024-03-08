@@ -16,7 +16,7 @@ if ( ! class_exists( 'ADMTH_Field_sortable' ) ) {
 
     public function render() {
 
-      echo $this->field_before();
+      
 
       echo '<div class="admth-sortable" data-depend-id="'. esc_attr( $this->field['id'] ) .'">';
 
@@ -71,7 +71,7 @@ if ( ! class_exists( 'ADMTH_Field_sortable' ) ) {
 
       echo '</div>';
 
-      echo $this->field_after();
+      
 
     }
 

@@ -59,7 +59,7 @@ if ( ! class_exists( 'ADMTH_Field_background' ) ) {
 
       $this->value = wp_parse_args( $this->value, $default_value );
 
-      echo $this->field_before();
+      
 
       echo '<div class="admth--background-colors">';
 
@@ -284,7 +284,7 @@ if ( ! class_exists( 'ADMTH_Field_background' ) ) {
 
       echo '</div>';
 
-      echo $this->field_after();
+      
 
     }
 

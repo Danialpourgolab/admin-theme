@@ -24,7 +24,7 @@ if ( ! class_exists( 'ADMTH_Field_gallery' ) ) {
 
       $hidden = ( empty( $this->value ) ) ? ' hidden' : '';
 
-      echo $this->field_before();
+      
 
       echo '<ul>';
       if ( ! empty( $this->value ) ) {
@@ -44,7 +44,7 @@ if ( ! class_exists( 'ADMTH_Field_gallery' ) ) {
       echo '<a href="#" class="button admth-warning-primary admth-clear-gallery'. esc_attr( $hidden ) .'">'. $args['clear_title'] .'</a>';
       echo '<input type="hidden" name="'. esc_attr( $this->field_name() ) .'" value="'. esc_attr( $this->value ) .'"'. $this->field_attributes() .'/>';
 
-      echo $this->field_after();
+      
 
     }
 

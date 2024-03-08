@@ -28,7 +28,7 @@ if ( ! class_exists( 'ADMTH_Field_repeater' ) ) {
 
       } else {
 
-        echo $this->field_before();
+        
 
         echo '<div class="admth-repeater-item admth-repeater-hidden" data-depend-id="'. esc_attr( $this->field['id'] ) .'">';
         echo '<div class="admth-repeater-content">';
@@ -90,7 +90,7 @@ if ( ! class_exists( 'ADMTH_Field_repeater' ) ) {
         echo '<div class="admth-repeater-alert admth-repeater-min">'. esc_html__( 'You cannot remove more.', 'admth' ) .'</div>';
         echo '<a href="#" class="button button-primary admth-repeater-add">'. $args['button_title'] .'</a>';
 
-        echo $this->field_after();
+        
 
       }
 

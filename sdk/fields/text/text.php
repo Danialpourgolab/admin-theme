@@ -18,11 +18,11 @@ if ( ! class_exists( 'ADMTH_Field_text' ) ) {
 
       $type = ( ! empty( $this->field['attributes']['type'] ) ) ? $this->field['attributes']['type'] : 'text';
 
-      echo $this->field_before();
+      
 
       echo '<input type="'. esc_attr( $type ) .'" name="'. esc_attr( $this->field_name() ) .'" value="'. esc_attr( $this->value ) .'"'. $this->field_attributes() .' />';
 
-      echo $this->field_after();
+      
 
     }
 

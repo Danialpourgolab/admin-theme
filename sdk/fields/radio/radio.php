@@ -23,7 +23,7 @@ if ( ! class_exists( 'ADMTH_Field_radio' ) ) {
 
       $inline_class = ( $args['inline'] ) ? ' class="admth--inline-list"' : '';
 
-      echo $this->field_before();
+      
 
       if ( isset( $this->field['options'] ) ) {
 
@@ -85,7 +85,7 @@ if ( ! class_exists( 'ADMTH_Field_radio' ) ) {
 
       }
 
-      echo $this->field_after();
+      
 
     }
 

@@ -25,7 +25,7 @@ if ( ! class_exists( 'ADMTH_Field_upload' ) ) {
         'remove_title'   => esc_html__( 'Remove', 'admth' ),
       ) );
 
-      echo $this->field_before();
+      
 
       $library = ( is_array( $args['library'] ) ) ? $args['library'] : array_filter( (array) $args['library'] );
       $library = ( ! empty( $library ) ) ? implode(',', $library ) : '';
@@ -54,7 +54,7 @@ if ( ! class_exists( 'ADMTH_Field_upload' ) ) {
       echo '<a href="#" class="button button-secondary admth-warning-primary admth--remove'. esc_attr( $hidden ) .'">'. $args['remove_title'] .'</a>';
       echo '</div>';
 
-      echo $this->field_after();
+      
 
     }
   }

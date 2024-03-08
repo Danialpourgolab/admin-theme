@@ -63,7 +63,7 @@ if ( ! class_exists( 'ADMTH_Field_border' ) ) {
 
       $value = wp_parse_args( $this->value, $default_value );
 
-      echo $this->field_before();
+      
 
       echo '<div class="admth--inputs" data-depend-id="'. esc_attr( $this->field['id'] ) .'">';
 
@@ -125,7 +125,7 @@ if ( ! class_exists( 'ADMTH_Field_border' ) ) {
         echo '</div>';
       }
 
-      echo $this->field_after();
+      
 
     }
 

@@ -18,7 +18,7 @@ if ( ! class_exists( 'ADMTH_Field_accordion' ) ) {
 
       $unallows = array( 'accordion' );
 
-      echo $this->field_before();
+      
 
       echo '<div class="admth-accordion-items" data-depend-id="'. esc_attr( $this->field['id'] ) .'">';
 
@@ -56,7 +56,7 @@ if ( ! class_exists( 'ADMTH_Field_accordion' ) ) {
 
       echo '</div>';
 
-      echo $this->field_after();
+      
 
     }
 

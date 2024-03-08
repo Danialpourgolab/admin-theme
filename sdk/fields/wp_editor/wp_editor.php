@@ -37,10 +37,10 @@ if ( ! class_exists( 'ADMTH_Field_wp_editor' ) ) {
 				'wpautop'       => $args['wpautop'],
 			);
 
-			echo $this->field_before();
+			
 
 			if ( admth_wp_editor_api() ) {
-				echo '<div class="admth-wp-editor" data-editor-settings="'. esc_attr( json_encode( $editor_settings ) ) .'">';
+				echo '<div class="admth-wp-editor" data-editor-settings="'. esc_attr( wp_json_encode( $editor_settings ) ) .'">';
 			}
 
 			echo '<textarea name="'. esc_attr( $this->field_name() ) .'"'. $this->field_attributes( $attributes ) . $editor_height .'>'. $this->value .'</textarea>';
@@ -49,7 +49,7 @@ if ( ! class_exists( 'ADMTH_Field_wp_editor' ) ) {
 				echo '</div>';
 			}
 
-			echo $this->field_after();
+			
 		}
 
 		public function enqueue() {

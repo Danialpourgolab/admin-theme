@@ -34,7 +34,7 @@ if ( ! class_exists( 'ADMTH_Field_link' ) ) {
 
       $maybe_hidden = ( empty( $hidden ) ) ? ' hidden' : '';
 
-      echo $this->field_before();
+      
 
       echo '<textarea readonly="readonly" class="admth--link hidden"></textarea>';
 
@@ -48,7 +48,7 @@ if ( ! class_exists( 'ADMTH_Field_link' ) ) {
       echo '<a href="#" class="button admth--edit'. esc_attr( $maybe_hidden ) .'">'. $args['edit_title'] .'</a> ';
       echo '<a href="#" class="button admth-warning-primary admth--remove'. esc_attr( $maybe_hidden ) .'">'. $args['remove_title'] .'</a>';
 
-      echo $this->field_after();
+      
 
     }
 

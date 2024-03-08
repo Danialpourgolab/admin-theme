@@ -28,7 +28,7 @@ if ( ! class_exists( 'ADMTH_Field_select' ) ) {
 
       $this->value = ( is_array( $this->value ) ) ? $this->value : array_filter( (array) $this->value );
 
-      echo $this->field_before();
+      
 
       if ( isset( $this->field['options'] ) ) {
 
@@ -50,7 +50,7 @@ if ( ! class_exists( 'ADMTH_Field_select' ) ) {
         $field_name       = $this->field_name( $multiple_name );
         $field_attr       = $this->field_attributes();
         $maybe_options    = $this->field['options'];
-        $chosen_data_attr = ( $args['chosen'] && ! empty( $args['settings'] ) ) ? ' data-chosen-settings="'. esc_attr( json_encode( $args['settings'] ) ) .'"' : '';
+        $chosen_data_attr = ( $args['chosen'] && ! empty( $args['settings'] ) ) ? ' data-chosen-settings="'. esc_attr( wp_json_encode( $args['settings'] ) ) .'"' : '';
 
         if ( is_string( $maybe_options ) && ! empty( $args['chosen'] ) && ! empty( $args['ajax'] ) ) {
           $options = $this->field_wp_query_data_title( $maybe_options, $this->value );
@@ -116,7 +116,7 @@ if ( ! class_exists( 'ADMTH_Field_select' ) ) {
 
       }
 
-      echo $this->field_after();
+      
 
     }
 

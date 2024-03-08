@@ -42,7 +42,7 @@ if ( ! class_exists( 'ADMTH_Field_group' ) ) {
 
       } else {
 
-        echo $this->field_before();
+        
 
         echo '<div class="admth-cloneable-item admth-cloneable-hidden" data-depend-id="'. esc_attr( $this->field['id'] ) .'">';
 
@@ -73,7 +73,7 @@ if ( ! class_exists( 'ADMTH_Field_group' ) ) {
 
         echo '</div>';
 
-        echo '<div class="admth-cloneable-wrapper admth-data-wrapper" data-title-by="'. esc_attr( json_encode( $title_by ) ) .'" data-title-by-prefix="'. esc_attr( $title_by_prefix ) .'" data-title-number="'. esc_attr( $title_number ) .'" data-field-id="['. esc_attr( $this->field['id'] ) .']" data-max="'. esc_attr( $args['max'] ) .'" data-min="'. esc_attr( $args['min'] ) .'">';
+        echo '<div class="admth-cloneable-wrapper admth-data-wrapper" data-title-by="'. esc_attr( wp_json_encode( $title_by ) ) .'" data-title-by-prefix="'. esc_attr( $title_by_prefix ) .'" data-title-number="'. esc_attr( $title_number ) .'" data-field-id="['. esc_attr( $this->field['id'] ) .']" data-max="'. esc_attr( $args['max'] ) .'" data-min="'. esc_attr( $args['min'] ) .'">';
 
         if ( ! empty( $this->value ) ) {
 
@@ -142,7 +142,7 @@ if ( ! class_exists( 'ADMTH_Field_group' ) ) {
         echo '<div class="admth-cloneable-alert admth-cloneable-min">'. esc_html__( 'You cannot remove more.', 'admth' ) .'</div>';
         echo '<a href="#" class="button button-primary admth-cloneable-add">'. $args['button_title'] .'</a>';
 
-        echo $this->field_after();
+        
 
       }
 

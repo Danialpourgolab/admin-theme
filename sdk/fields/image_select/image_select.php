@@ -26,7 +26,7 @@ if ( ! class_exists( 'ADMTH_Field_image_select' ) ) {
 
       $value = ( is_array( $this->value ) ) ? $this->value : array_filter( (array) $this->value );
 
-      echo $this->field_before();
+      
 
       if ( ! empty( $args['options'] ) ) {
 
@@ -54,7 +54,7 @@ if ( ! class_exists( 'ADMTH_Field_image_select' ) ) {
 
       }
 
-      echo $this->field_after();
+      
 
     }
 

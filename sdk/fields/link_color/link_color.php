@@ -42,7 +42,7 @@ if ( ! class_exists( 'ADMTH_Field_link_color' ) ) {
 
       $value = wp_parse_args( $this->value, $default_values );
 
-      echo $this->field_before();
+      
 
       foreach ( $color_props as $color_prop_key => $color_prop_value ) {
 
@@ -59,7 +59,7 @@ if ( ! class_exists( 'ADMTH_Field_link_color' ) ) {
 
       }
 
-      echo $this->field_after();
+
 
     }
 

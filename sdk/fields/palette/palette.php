@@ -18,7 +18,7 @@ if ( ! class_exists( 'ADMTH_Field_palette' ) ) {
 
       $palette = ( ! empty( $this->field['options'] ) ) ? $this->field['options'] : array();
 
-      echo $this->field_before();
+      
 
       if ( ! empty( $palette ) ) {
 
@@ -50,7 +50,7 @@ if ( ! class_exists( 'ADMTH_Field_palette' ) ) {
 
       }
 
-      echo $this->field_after();
+      
 
     }
 

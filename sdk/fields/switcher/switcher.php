@@ -21,7 +21,7 @@ if ( ! class_exists( 'ADMTH_Field_switcher' ) ) {
       $text_off   = ( ! empty( $this->field['text_off'] ) ) ? $this->field['text_off'] : esc_html__( 'Off', 'admth' );
       $text_width = ( ! empty( $this->field['text_width'] ) ) ? ' style="width: '. esc_attr( $this->field['text_width'] ) .'px;"': '';
 
-      echo $this->field_before();
+      
 
       echo '<div class="admth--switcher'. esc_attr( $active ) .'"'. $text_width .'>';
       echo '<span class="admth--on">'. esc_attr( $text_on ) .'</span>';
@@ -32,7 +32,7 @@ if ( ! class_exists( 'ADMTH_Field_switcher' ) ) {
 
       echo ( ! empty( $this->field['label'] ) ) ? '<span class="admth--label">'. esc_attr( $this->field['label'] ) . '</span>' : '';
 
-      echo $this->field_after();
+      
 
     }
 
