@@ -7,8 +7,8 @@
  * @version 1.0.0
  *
  */
-if ( ! class_exists( 'WP_Customize_Panel_ADMTH' ) && class_exists( 'WP_Customize_Panel' ) ) {
-  class WP_Customize_Panel_ADMTH extends WP_Customize_Panel {
+if ( ! class_exists( 'WAP_Customize_Panel_ADMTH' ) && class_exists( 'WAP_Customize_Panel' ) ) {
+  class WAP_Customize_Panel_ADMTH extends WAP_Customize_Panel {
     public $type = 'admth';
   }
 }
