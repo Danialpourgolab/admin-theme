@@ -412,7 +412,6 @@ if ( ! class_exists( 'ADMTH_Setup' ) ) {
         'button_set',
         'callback',
         'checkbox',
-        'code_editor',
         'color',
         'content',
         'date',
